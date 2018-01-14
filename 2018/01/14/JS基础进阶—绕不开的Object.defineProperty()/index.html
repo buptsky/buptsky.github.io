@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="随笔总结">
 <meta property="og:description" content="Object.defineProperty()来自 ECMAScript 5.1 (ECMA-262) 规范兼容    Internet Explorer 9+ 等其他现代浏览器  初识Object.defineProperty()&amp;emsp;&amp;emsp;Object.defineProperty()方法用于在一个对象上定义一个新属性，或者修改一个对象的现有属性， 并返回这个对象，该方法允许精确">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/6226474-904c43a09c42b5af.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2018-01-14T09:27:36.034Z">
+<meta property="og:updated_time" content="2018-01-14T09:29:20.453Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JS基础进阶—绕不开的Object.defineProperty()">
 <meta name="twitter:description" content="Object.defineProperty()来自 ECMAScript 5.1 (ECMA-262) 规范兼容    Internet Explorer 9+ 等其他现代浏览器  初识Object.defineProperty()&amp;emsp;&amp;emsp;Object.defineProperty()方法用于在一个对象上定义一个新属性，或者修改一个对象的现有属性， 并返回这个对象，该方法允许精确">
@@ -186,7 +186,7 @@
 <p>返回:  被传递给函数的对象</p>
 <p>我们发现重点就在第三个参数，属性描述符上面。</p>
 <h3 id="属性描述符"><a href="#属性描述符" class="headerlink" title="属性描述符"></a>属性描述符</h3><p>在理解属性描述符之前，需要先了解一点前置知识。</p>
-<h4 id="getter-和-setter"><a href="#getter-和-setter" class="headerlink" title="getter 和  setter"></a>getter 和  setter</h4><blockquote>
+<h4 id="getter-和-setter"><a href="#getter-和-setter" class="headerlink" title="getter 和 setter"></a>getter 和 setter</h4><blockquote>
 <p>对象属性是由名字、值和一组特性构成的。在ES5中，属性值可以用一个或两个方法替代，这两个方法就是getter和setter。由getter和setter定义的属性称做 “存取器属性”，它不同于 “数据属性”，数据属性就是一个简单的值。</p>
 </blockquote>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">var prop = &#123;</span><br><span class="line">    a: 0,</span><br><span class="line">    get b()&#123;</span><br><span class="line">        return 1;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">console.log(prop.a); //0</span><br><span class="line">console.log(prop.b); //1</span><br></pre></td></tr></table></figure>
