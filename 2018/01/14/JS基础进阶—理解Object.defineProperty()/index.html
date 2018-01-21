@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>JS基础进阶—理解Object.defineProperty() | 随笔总结</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Object.defineProperty()来自 ECMAScript 5.1 (ECMA-262) 规范兼容    Internet Explorer 9+ 等其他现代浏览器  初识Object.defineProperty()&amp;emsp;&amp;emsp;Object.defineProperty()方法用于在一个对象上定义一个新属性，或者修改一个对象的现有属性， 并返回这个对象，该方法允许精">
+  <meta name="description" content="Object.defineProperty()来自 ECMAScript 5.1 (ECMA-262) 规范兼容    Internet Explorer 9+ 等其他现代浏览器">
 <meta name="keywords" content="JS基础进阶">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JS基础进阶—理解Object.defineProperty()">
 <meta property="og:url" content="http://yoursite.com/2018/01/14/JS基础进阶—理解Object.defineProperty()/index.html">
 <meta property="og:site_name" content="随笔总结">
-<meta property="og:description" content="Object.defineProperty()来自 ECMAScript 5.1 (ECMA-262) 规范兼容    Internet Explorer 9+ 等其他现代浏览器  初识Object.defineProperty()&amp;emsp;&amp;emsp;Object.defineProperty()方法用于在一个对象上定义一个新属性，或者修改一个对象的现有属性， 并返回这个对象，该方法允许精">
+<meta property="og:description" content="Object.defineProperty()来自 ECMAScript 5.1 (ECMA-262) 规范兼容    Internet Explorer 9+ 等其他现代浏览器">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/6226474-904c43a09c42b5af.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2018-01-21T11:14:03.262Z">
+<meta property="og:updated_time" content="2018-01-21T11:20:30.606Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JS基础进阶—理解Object.defineProperty()">
-<meta name="twitter:description" content="Object.defineProperty()来自 ECMAScript 5.1 (ECMA-262) 规范兼容    Internet Explorer 9+ 等其他现代浏览器  初识Object.defineProperty()&amp;emsp;&amp;emsp;Object.defineProperty()方法用于在一个对象上定义一个新属性，或者修改一个对象的现有属性， 并返回这个对象，该方法允许精">
+<meta name="twitter:description" content="Object.defineProperty()来自 ECMAScript 5.1 (ECMA-262) 规范兼容    Internet Explorer 9+ 等其他现代浏览器">
 <meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/6226474-904c43a09c42b5af.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
   
     <link rel="alternative" href="/atom.xml" title="随笔总结" type="application/atom+xml">
@@ -174,9 +174,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <a id="more"></a>
-<blockquote>
-<p>Object.defineProperty()来自 <a href="https://www.ecma-international.org/ecma-262/5.1/#sec-15.2.3.6" target="_blank" rel="noopener">ECMAScript 5.1 (ECMA-262)</a> 规范<br>兼容    Internet Explorer 9+ 等其他现代浏览器</p>
+        <blockquote>
+<p>Object.defineProperty()来自 <a href="https://www.ecma-international.org/ecma-262/5.1/#sec-15.2.3.6" target="_blank" rel="noopener">ECMAScript 5.1 (ECMA-262)</a> 规范<br>兼容    Internet Explorer 9+ 等其他现代浏览器<br><a id="more"></a></p>
 </blockquote>
 <h2 id="初识Object-defineProperty"><a href="#初识Object-defineProperty" class="headerlink" title="初识Object.defineProperty()"></a>初识Object.defineProperty()</h2><p>&emsp;&emsp;<code>Object.defineProperty()</code>方法用于在一个对象上定义一个新属性，或者修改一个对象的现有属性， 并返回这个对象，该方法允许精确添加或修改对象的属性。</p>
 <p>&emsp;&emsp;乍看描述，也许会让人不太理解，在对象上定义属性我们通常使用对象字面量语法或者<code>.</code>操作符来处理，比如<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var obj = &#123;&#125;; obj.attr = 1;</span><br><span class="line">// 或是</span><br><span class="line">var obj2 = &#123;attr: 2&#125;;</span><br></pre></td></tr></table></figure></p>
@@ -474,11 +473,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">参考</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color3">参考</a>
               </li>
             
             <div class="clearfix"></div>
