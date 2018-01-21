@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="随笔总结">
 <meta property="og:description" content="Object.defineProperty()来自 ECMAScript 5.1 (ECMA-262) 规范兼容    Internet Explorer 9+ 等其他现代浏览器">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/6226474-904c43a09c42b5af.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2018-01-21T11:20:30.606Z">
+<meta property="og:updated_time" content="2018-01-21T11:23:42.558Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JS基础进阶—理解Object.defineProperty()">
 <meta name="twitter:description" content="Object.defineProperty()来自 ECMAScript 5.1 (ECMA-262) 规范兼容    Internet Explorer 9+ 等其他现代浏览器">
@@ -175,8 +175,9 @@
     <div class="article-entry" itemprop="articleBody">
       
         <blockquote>
-<p>Object.defineProperty()来自 <a href="https://www.ecma-international.org/ecma-262/5.1/#sec-15.2.3.6" target="_blank" rel="noopener">ECMAScript 5.1 (ECMA-262)</a> 规范<br>兼容    Internet Explorer 9+ 等其他现代浏览器<br><a id="more"></a></p>
+<p>Object.defineProperty()来自 <a href="https://www.ecma-international.org/ecma-262/5.1/#sec-15.2.3.6" target="_blank" rel="noopener">ECMAScript 5.1 (ECMA-262)</a> 规范<br>兼容    Internet Explorer 9+ 等其他现代浏览器</p>
 </blockquote>
+<a id="more"></a>
 <h2 id="初识Object-defineProperty"><a href="#初识Object-defineProperty" class="headerlink" title="初识Object.defineProperty()"></a>初识Object.defineProperty()</h2><p>&emsp;&emsp;<code>Object.defineProperty()</code>方法用于在一个对象上定义一个新属性，或者修改一个对象的现有属性， 并返回这个对象，该方法允许精确添加或修改对象的属性。</p>
 <p>&emsp;&emsp;乍看描述，也许会让人不太理解，在对象上定义属性我们通常使用对象字面量语法或者<code>.</code>操作符来处理，比如<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var obj = &#123;&#125;; obj.attr = 1;</span><br><span class="line">// 或是</span><br><span class="line">var obj2 = &#123;attr: 2&#125;;</span><br></pre></td></tr></table></figure></p>
 <p>&emsp;&emsp;该方法的重要意义在于后面一句，即<code>该方法允许精确添加或修改对象的属性</code>。<br>&emsp;&emsp;举个栗子,仅用于初步体会该方法的效果。我们有时候会需要遍历一个对象的所有属性，这时可能会使用<code>for in</code>方法<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">var obj = &#123;</span><br><span class="line">  name: &apos;sky&apos;,</span><br><span class="line">  age: 18,</span><br><span class="line">  sex: &apos;male&apos;</span><br><span class="line">&#125;</span><br><span class="line">for (var i in obj) &#123;</span><br><span class="line">  console.log(i);</span><br><span class="line">&#125;</span><br><span class="line">// 打印结果</span><br><span class="line">// name</span><br><span class="line">// age</span><br><span class="line">// sex</span><br></pre></td></tr></table></figure></p>
